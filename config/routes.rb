@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
   
+  get "users/new"
+
 =begin
 match "static_pages/home", :controller => "static_pages", 
 :as => :home, :action => :home
@@ -12,6 +14,9 @@ match "static_pages/about", :controller => "static_pages",
 =end
 
 root :to => 'static_pages#home'
+
+match '/signup',  to: 'users#new'
+
 match '/help',    to: 'static_pages#help'
 match '/about',   to: 'static_pages#about'
 match '/contact', to: 'static_pages#contact'
