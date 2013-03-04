@@ -1,17 +1,6 @@
 SampleApp::Application.routes.draw do
   
-  resources :users
-
-=begin
-match "static_pages/home", :controller => "static_pages", 
-:as => :home, :action => :home
-match "static_pages/contact", :controller => "static_pages", 
-:as => :contact, :action => :contact
-match "static_pages/help", :controller => "static_pages",
- :as => :help,  :action => :help
-match "static_pages/about", :controller => "static_pages", 
-:as => :about, :action => :about
-=end
+resources :users
 
 root :to => 'static_pages#home'
 
