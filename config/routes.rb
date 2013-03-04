@@ -1,6 +1,6 @@
 SampleApp::Application.routes.draw do
   
-  get "users/new"
+  resources :users
 
 =begin
 match "static_pages/home", :controller => "static_pages", 
